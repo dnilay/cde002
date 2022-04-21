@@ -1,0 +1,30 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: customer-ws
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: sa
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      path: /h2
+      settings:
+        web-allow-others: true   
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.49.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
