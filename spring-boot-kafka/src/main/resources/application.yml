@@ -1,0 +1,10 @@
+hawtio:
+  authenticationEnabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hawtio,jolokia
+spring:
+  jmx:
+    enabled: true 
